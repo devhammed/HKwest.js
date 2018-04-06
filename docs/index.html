@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HKwest.js - Simple and Minimalist AJAX/HTTP Requests Javascript Library</title>
+<meta name="description" content="HKwest.js - Simple and Minimalist AJAX/HTTP Requests Javascript Library (961 Bytes).">
+<link rel="stylesheet" href="/h.css">
+<script src="HKwest.js"></script>
+</head>
+<body class="h-content">
+<header class="h-red h-container">
+<h1>HKwest.js - Simple AJAX/HTTP Requests Library</h1>
+</header>
+<main class="h-container h-light-grey">
+<a class="h-dark-grey h-btn" href="HKwest.js">Download v1.0</a>
+<a class="h-dark-grey h-btn" href="http://github.com/Horlahcoded/HKwest.js">Fork on Github</a>
+<div class="h-container">
+<h2>HKwest.js AJAX/HTTP Library</h2>
+<hr/>
+HKwest.js is a simple and minimalist Javascript Library for AJAX, HTTP Requests and CORS Requests.
+</div>
+<div class="h-container">
+<h2>Request Examples</h2>
+<hr/>
+HKwest.js supports these HTTP Methods (GET, POST, PUT, PATCH, DELETE, OPTIONS, TRACE, CONNECT) and can be use to develop AJAX and RESTful projects. <br/>
+HKwest.js would return XMLHttpRequest/XDomainRequest object to your callback function after successful request so you will have access to all Javascript Native methods e.g responseText, responseXML, status, statusText, getAllResponseHeaders, getResponseHeader(header) etc. <br/>
+Below is an example GET request to HTTPBIN.org site: <br/>
+<div class="h-info">
+&lt;script&gt; <br/>
+HKwest({ <br/>
+url: 'http://httpbin.org/get?q=name', <br/>
+done: function (xhr) { <br/>
+// do something with XHR object <br/>
+// alert(xhr.responseText); <br/>
+}}); <br/>
+&lt;/script&gt;
+</div>
+<br/>
+Below is an example POST requests to HTTPBIN.org <br/>
+<div class="h-info">
+&lt;script&gt; <br/>
+HKwest({ <br/>
+url: 'http://httpbin.org/post', <br/>
+type: 'POST', <br/>
+data: { <br/>
+"name": "Oyedele Hammed Horlah", <br/>
+"age": 17, <br/>
+"bio": "I'm a Self-taught Computer Programmer and Web Developer" <br/>
+}, <br/>
+headers: { <br/>
+"X-Key": "value", <br/>
+"X-Name": "horlahcoded" <br/>
+}, <br/>
+done: function (xhr) { <br/>
+// do something with XHR object <br/>
+// alert(xhr.responseText); <br/>
+}}); <br/>
+&lt;/script&gt;
+</div>
+</div>
+<div class="h-container">
+<h2>Options and Settings</h2>
+<hr/>
+HKwest.js options are used to configure the request. some of this options are optional and some are required.
+<div class="h-info">
+<p><i class="h-grey">url</i> : Request URL (required)</p>
+<p><i class="h-grey">type</i> : Request Method (optional, default: GET)</p>
+<p><i class="h-grey">data</i> : Request Body, it can be a String or Object (key/value) or JSON String or FormData Object (optional)</p>
+<p><i class="h-grey">headers</i> : Request Headers in Keys and Values Pairs (Object) (optional)</p>
+<p><i class="h-grey">contentType</i> : Request Body Data Type (default: application/www-form-url-encoded, optional)</p>
+<p><i class="h-grey">auth</i> : Request Authentication, username:password String e.g <b>auth: 'username:password'</b> (optional)</p>
+<p><i class="h-grey">mime</i> : Override Response Data Mime(optional)</p>
+<p><i class="h-grey">done</i> : Callback Function, HKwest would pass the XHR Object to this Function so that you would have access to these properties <b>(response, responseText, responseXML, responseURL, responseType, status, statusText, getAllResponseHeaders(), getResponseHeader(header) and readyState)</b>. (optional, default: Console Log)</p>
+<p><i class="h-grey">returnType</i> : This would tell XHR the type of response that would be received, it accepts (text, arraybuffer, blob, json, document) values only. (default: text, optional)</p>
+</div>
+<br/>
+</div>
+</main>
+<div class="h-panel h-turquoise">
+Thanks, Check out my other projects <a href="index.php">here</a>.
+</div>
+<p></p>
+<footer class="h-red h-container">
+<h4>Copyright 2017 - Oyedele Hammed Horlah</h4>
+</footer>
+</body>
+</html>
