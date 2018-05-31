@@ -5,6 +5,7 @@
  * @since October 8, 2017
  * @version 2.0
 */
+
 function HKwest( opt ) {
   var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new XDomainRequest(),
     serialize = function ( obj ) {
